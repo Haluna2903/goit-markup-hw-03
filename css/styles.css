@@ -18,8 +18,17 @@ body {
   --button-hover-color: #e7e9fc;
 }
 
+.container {
+  width: 1158px;
+  padding: 0 15px;
+  margin: 0 auto;
+  outline: 2px solid red;
+}
+
 .list {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 /*HEDER*/
@@ -73,15 +82,26 @@ body {
 /*hero*/
 .hero {
   background-color: var(--color-general);
+  text-align: center;
+  padding-top: 188px;
+  padding-bottom: 188px;
 }
 .hero-title {
   font-size: 56px;
-  text-align: center;
   line-height: 1.07;
-
   color: var(--title-text-color);
+
+  margin: 0 auto 48px;
+  max-width: 496px;
 }
 .hero-button {
+  display: inline-block;
+  border-radius: 4px;
+  padding: 16px 32px;
+  min-width: 169px;
+  border: 0;
+  margin: 0 auto;
+
   cursor: pointer;
   font-family: inherit;
   font-size: 16px;
@@ -98,30 +118,66 @@ body {
 }
 
 /*all section*/
+.section.no-padding {
+  padding-top: 0px;
+}
+.section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
 .section-title {
+  margin-top: 0;
+  margin-bottom: 72px;
   font-size: 36px;
   text-align: center;
   line-height: 1.11;
 }
 .section-subtitle {
+  margin-top: 0;
+  margin-bottom: 8px;
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
 }
 .section-text {
   color: var(--color-additional);
+  margin-top: 0;
+  margin-bottom: 0;
 }
+/*Benefits */
+
+/*services*/
 
 /*team*/
-.team {
+.section.team {
   background-color: var(--accent-color);
 }
-.team-item {
+.team-panel {
+  max-width: 264px;
   background-color: var(--title-text-color);
 }
 
+.team-card {
+  text-align: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
 /*portfolio*/
-.section-btn {
+
+.section.portfolio {
+  padding-top: 96px;
+}
+.items-btn {
+  margin-bottom: 72px;
+}
+.portfolio-btn {
+  display: inline-block;
+  border-radius: 4px;
+  padding: 12px 24px;
+  min-width: 69px;
+  border: 0;
+
   cursor: pointer;
   font-family: inherit;
   font-size: 16px;
@@ -132,10 +188,25 @@ body {
   color: var(--button-color);
   background-color: var(--accent-color);
 }
-.section-btn:hover,
-.section-btn:focus {
+.portfolio-btn:hover,
+.portfolio-btn:focus {
   color: var(--accent-color);
   background-color: var(--button-color);
+}
+
+.portfolio-panel {
+  border: 1px solid var(--button-hover-color);
+  max-width: 360px;
+}
+
+/*під питанням */
+.portfolio-items img {
+  border: none;
+}
+.portfolio-card {
+  padding-left: 16px;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 /*footer*/
@@ -147,4 +218,5 @@ body {
 }
 .footer-text {
   color: var(--accent-color);
+  margin-top: 0;
 }
