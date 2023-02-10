@@ -22,7 +22,7 @@ body {
   width: 1158px;
   padding: 0 15px;
   margin: 0 auto;
-  outline: 2px solid red;
+  /*outline: 2px solid red;*/
 }
 
 .list {
@@ -31,10 +31,38 @@ body {
   padding: 0;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 /*HEDER*/
+.header-page {
+  border-bottom: 1px solid var(--button-hover-color);
+}
+.heder-container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
 
 /*logo*/
 .logo {
+  display: block;
   font-family: Raleway, sans-serif;
   font-weight: 800;
   font-size: 18px;
@@ -50,7 +78,18 @@ body {
 }
 
 /*nav*/
+.nav-items {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  gap: 70px;
+}
+
 .nav-link {
+  display: block;
+  padding-top: 24px;
+  padding-bottom: 24px;
+
   font-weight: 500;
   text-decoration: none;
   letter-spacing: 0.02em;
@@ -67,8 +106,18 @@ body {
   color: var(--button-color);
 }
 
+.nav-menu {
+  display: flex;
+  gap: 40px;
+}
+
 /*address*/
+
 .contact-link {
+  display: block;
+  padding-top: 24px;
+  padding-bottom: 24px;
+
   text-decoration: none;
   font-style: normal;
 
@@ -77,6 +126,11 @@ body {
 .contact-link:hover,
 .contact-link:focus {
   color: var(--button-color);
+}
+
+.contact-menu {
+  display: flex;
+  gap: 40px;
 }
 
 /*hero*/
@@ -99,7 +153,7 @@ body {
   border-radius: 4px;
   padding: 16px 32px;
   min-width: 169px;
-  border: 0;
+  border: transparent;
   margin: 0 auto;
 
   cursor: pointer;
@@ -144,17 +198,33 @@ body {
   margin-top: 0;
   margin-bottom: 0;
 }
+.section-items {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
 /*Benefits */
 
+.benefits-item {
+  flex-basis: calc((100% - 72px) / 4);
+}
 /*services*/
+
+.services-item {
+  flex-basis: calc((100% - 48px) / 3);
+}
 
 /*team*/
 .section.team {
   background-color: var(--accent-color);
 }
-.team-panel {
-  max-width: 264px;
+
+.team-item {
+  flex-basis: calc((100% - 72px) / 4);
   background-color: var(--title-text-color);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  border-radius: 0px 0px 4px 4px;
 }
 
 .team-card {
@@ -169,14 +239,17 @@ body {
   padding-top: 96px;
 }
 .items-btn {
+  display: flex;
+  gap: 24px;
   margin-bottom: 72px;
+  justify-content: center;
 }
 .portfolio-btn {
   display: inline-block;
   border-radius: 4px;
   padding: 12px 24px;
   min-width: 69px;
-  border: 0;
+  border: transparent;
 
   cursor: pointer;
   font-family: inherit;
@@ -194,24 +267,37 @@ body {
   background-color: var(--button-color);
 }
 
+.portfolio-items {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -24px;
+  margin-bottom: -48px;
+}
 .portfolio-panel {
-  border: 1px solid var(--button-hover-color);
-  max-width: 360px;
+  flex-basis: calc(100% / 3 - 24px);
+  margin-right: 24px;
+  margin-bottom: 48px;
+  /*border: 1px solid #e7e9fc;*/
 }
 
-/*під питанням */
-.portfolio-items img {
-  border: none;
-}
 .portfolio-card {
   padding-left: 16px;
   padding-top: 32px;
   padding-bottom: 32px;
+  border-right: 1px solid var(--button-hover-color);
+  border-left: 1px solid var(--button-hover-color);
+  border-bottom: 1px solid var(--button-hover-color);
 }
 
 /*footer*/
 .footer {
+  padding-top: 100px;
+  padding-bottom: 100px;
   background-color: var(--color-general);
+}
+
+.footer .logo {
+  margin-bottom: 16px;
 }
 .footer-logo-color {
   color: var(--title-text-color);
@@ -219,4 +305,5 @@ body {
 .footer-text {
   color: var(--accent-color);
   margin-top: 0;
+  max-width: 264px;
 }
